@@ -1,5 +1,6 @@
 package com.usernamevalidation;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.regex.*;
 
@@ -13,21 +14,47 @@ public class UserNameValidation {
 		 Matcher m = p.matcher(name);
 		 return m.matches(); 
 		 }
-	public static boolean isValidEmail(String email) {
-
-		String regexEmail = "^[0-9 A-Z a-z]+(([._+-]*)[0-9A-Za-z]+)*@[0-9 A-Z a-z]+.[a-z]{2,4}([.][a-z]{2,3})*$";
-		Pattern p = Pattern.compile(regexEmail);
-		if (email == null) {
-			return false;
-		}
-		Matcher m = p.matcher(email);
-		return m.matches();
-	}
 	
+	public static void isValidEmail() {
+		 ArrayList<String> emails = new ArrayList<String>(); 
+		 emails.add("abc@yahoo.com");
+		 emails.add("abc-100@yahoo.com");
+		 emails.add("abc.100@yahoo.com");
+		 emails.add("abc111@abc.com");
+		 emails.add("abc-100@abc.net");
+		 emails.add("abc.100@abc.com.au");
+		 emails.add("abc@1.com");
+		 emails.add("abc@gmail.com");
+		 emails.add("abc@gmail.com.com");
+		 emails.add("abc+100@gmail.com");
+		 
+		 emails.add("abc");
+		 emails.add("abc@.com.my");
+		 emails.add("abc123@gmail.a");
+		 emails.add("abc123@.com");
+		 emails.add("abc123@.com.com");
+		 emails.add(".abc@abc.com");
+		 emails.add("abc()*@gmail.com");
+		 emails.add("abc@%*.com");
+		 emails.add("abc..2002@gmail.com");
+		 emails.add("abc.@gmail.com");
+		 emails.add("abc@abc@gmail.com");
+		 emails.add("abc@gmail.com.1a");
+		 emails.add("abc@gmail.com.aa.au");
+		 
+		 String regexEmail = "^[0-9A-Za-z]+(([._+-]{0,1})[0-9A-Za-z]+)*@[0-9A-Za-z]+.[a-z]{2,4}.([a-z]{2,3})*$";
+		 Pattern p = Pattern.compile(regexEmail);
+		 
+		 for(String email : emails) {  
+	     //Create instance of matcher   
+	     Matcher matcher = p.matcher(email);  
+	     System.out.println(email +" : "+ matcher.matches()+"\n");  
+	        } 	
+	}
 	public static boolean isValidMobileNum(String mobileNum) {
 		String regexMobileNum = "^[9][1]\\s[6-9]{1}[0-9]{9}$";
 		Pattern p = Pattern.compile(regexMobileNum);
-		if ( mobileNum == null ){
+		if ( mobileNum == null ) {
 			return false;
 		}
 		Matcher m = p.matcher(mobileNum);
@@ -57,10 +84,6 @@ public class UserNameValidation {
 	    String lastName = input.nextLine();		 
 		System.out.println(isValidFirstName(lastName));
 		
-		System.out.print("Plase enter the your Email ID: ");
-	    String emailID = input.nextLine();		 
-		System.out.println(isValidEmail(emailID));
-		
 		System.out.print("Plase enter the your mobile with counry code 91: ");
 	    String mobileNo = input.nextLine();		 
 		System.out.println(isValidMobileNum(mobileNo));
@@ -68,6 +91,8 @@ public class UserNameValidation {
 		System.out.print("please enter the password: ");
 		String userPassword = input.nextLine();
 		System.out.println(isValidPassword(userPassword));
+		
+		System.out.println("Lets validate email addreess");
+		isValidEmail();	
 	}
-	
 }
