@@ -34,6 +34,16 @@ public class UserNameValidation {
 		
 		return m.matches();
 	}
+	public static boolean isValidPassword(String password) {
+		String regexPassword = "^[a-z A-z]{8,}$";
+		Pattern p = Pattern.compile(regexPassword);
+		if ( password == null ){
+			return false;
+		}
+		Matcher m = p.matcher(password);
+		
+		return m.matches();
+	}
 	
 	public static void main(String[] args) {
 		System.out.println("Welcome to the username validation program.");
@@ -54,6 +64,11 @@ public class UserNameValidation {
 		System.out.print("Plase enter the your mobile with counry code 91: ");
 	    String mobileNo = input.nextLine();		 
 		System.out.println(isValidMobileNum(mobileNo));
+		
+		
+		System.out.print("please enter the password: ");
+		String userPassword = input.nextLine();
+		System.out.println(isValidPassword(userPassword));
 	}
 	
 }
