@@ -11,12 +11,10 @@ public class UserNameValidation {
 			return false;
 		}
 		 Matcher m = p.matcher(name);
-		 return m.matches();
-		 
-			 
+		 return m.matches(); 
 		 }
 	public static boolean isValidEmail(String email) {
-//		String regexEmail = "^[a-z A-Z 0-9]+(\\. [A-Z a-z 0-9]+)* @ [a-z A-Z 0-9]+(\\.[A-Z a-z]+)* (\\.[A-Z a-z]{2,})$";
+
 		String regexEmail = "^[0-9 A-Z a-z]+(([._+-]*)[0-9A-Za-z]+)*@[0-9 A-Z a-z]+.[a-z]{2,4}([.][a-z]{2,3})*$";
 		Pattern p = Pattern.compile(regexEmail);
 		if (email == null) {
@@ -24,7 +22,17 @@ public class UserNameValidation {
 		}
 		Matcher m = p.matcher(email);
 		return m.matches();
+	}
+	
+	public static boolean isValidMobileNum(String mobileNum) {
+		String regexMobileNum = "^[9][1]\\s[6-9]{1}[0-9]{9}$";
+		Pattern p = Pattern.compile(regexMobileNum);
+		if ( mobileNum == null ){
+			return false;
+		}
+		Matcher m = p.matcher(mobileNum);
 		
+		return m.matches();
 	}
 	
 	public static void main(String[] args) {
@@ -42,6 +50,10 @@ public class UserNameValidation {
 		System.out.print("Plase enter the your Email ID: ");
 	    String emailID = input.nextLine();		 
 		System.out.println(isValidEmail(emailID));
+		
+		System.out.print("Plase enter the your mobile with counry code 91: ");
+	    String mobileNo = input.nextLine();		 
+		System.out.println(isValidMobileNum(mobileNo));
 	}
 	
 }
