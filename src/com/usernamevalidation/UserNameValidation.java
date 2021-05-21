@@ -49,21 +49,21 @@ public class UserNameValidation {
 		System.out.println("Welcome to the username validation program.");
 		Scanner input = new Scanner(System.in);
 		 
-//		System.out.print("Plase enter the your First Name: ");
-//		String firstName = input.nextLine();	 
-//	    System.out.println(isValidFirstName(firstName));
-//	        
-//	    System.out.print("Plase enter the your last Name: ");
-//	    String lastName = input.nextLine();		 
-//		System.out.println(isValidFirstName(lastName));
-//		
-//		System.out.print("Plase enter the your Email ID: ");
-//	    String emailID = input.nextLine();		 
-//		System.out.println(isValidEmail(emailID));
-//		
-//		System.out.print("Plase enter the your mobile with counry code 91: ");
-//	    String mobileNo = input.nextLine();		 
-//		System.out.println(isValidMobileNum(mobileNo));
+		System.out.print("Plase enter the your First Name: ");
+		String firstName = input.nextLine();	 
+	    System.out.println(isValidFirstName(firstName));
+	        
+	    System.out.print("Plase enter the your last Name: ");
+	    String lastName = input.nextLine();		 
+		System.out.println(isValidFirstName(lastName));
+		
+		System.out.print("Plase enter the your Email ID: ");
+	    String emailID = input.nextLine();		 
+		System.out.println(isValidEmail(emailID));
+		
+		System.out.print("Plase enter the your mobile with counry code 91: ");
+	    String mobileNo = input.nextLine();		 
+		System.out.println(isValidMobileNum(mobileNo));
 		
 		System.out.print("please enter the password: ");
 		String userPassword = input.nextLine();
