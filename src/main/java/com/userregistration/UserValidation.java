@@ -16,7 +16,7 @@ public class UserValidation {
     // regex pattern for password
     private static final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()]).{8,}$";
 
-    // Method to validate first name and last name
+    // Method to validate first name and las t name
     public boolean validateName(String name) {
         Pattern pattern = Pattern.compile(NAME_PATTERN);
         return pattern.matcher(name).matches();
