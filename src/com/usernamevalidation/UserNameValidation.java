@@ -14,7 +14,6 @@ public class UserNameValidation {
 		 return m.matches(); 
 		 }
 	public static boolean isValidEmail(String email) {
-
 		String regexEmail = "^[0-9 A-Z a-z]+(([._+-]*)[0-9A-Za-z]+)*@[0-9 A-Z a-z]+.[a-z]{2,4}([.][a-z]{2,3})*$";
 		Pattern p = Pattern.compile(regexEmail);
 		if (email == null) {
@@ -41,7 +40,6 @@ public class UserNameValidation {
 			return false;
 		}
 		Matcher m = p.matcher(password);
-		
 		return m.matches();
 	}
 	
