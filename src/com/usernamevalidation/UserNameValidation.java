@@ -48,7 +48,11 @@ public class UserNameValidation {
 		 for(String email : emails) {  
 	     //Create instance of matcher   
 	     Matcher matcher = p.matcher(email);  
-	     System.out.println(email +" : "+ matcher.matches()+"\n");  
+	     if(matcher.matches()) {
+	    	 System.out.println(email +" : "+ " is Valid email "+"\n"); 
+	     } else {
+	    	 System.out.println(email +" : "+ " is Invalid email "+"\n"); 
+	     }
 	        } 	
 	}
 	public static boolean isValidMobileNum(String mobileNum) {
