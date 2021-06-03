@@ -8,9 +8,7 @@ public class UserValidation {
     // regex pattern for first name and last name
     private static final String NAME_PATTERN = "^[A-Z][a-z A-Z]{2,}$";
     // regex pattern for email
-    private static final String EMAIL_PATTERN = "^[0-9 A-Z a-z]+" +
-            "(([._+-]*)[0-9A-Za-z]+)*@[0-9 A-Z a-z]+." +
-            "[a-z]{2,4}([.][a-z]{2,3})*$";
+    private static final String EMAIL_PATTERN = "^[0-9A-Za-z]+(([._+-]?)[0-9A-Za-z]+)*@[0-9A-Za-z]+.[a-z]{2,4}.([a-z]{2,3})*$";
     // regex pattern for mobile number
     private static final String MOBILE_PATTERN = "^[9][1]\\s[6-9][0-9]{9}$";
     // regex pattern for password
@@ -35,5 +33,20 @@ public class UserValidation {
     public boolean validatePassword(String password) {
         Pattern pattern = Pattern.compile(PASSWORD_PATTERN);
         return pattern.matcher(password).matches();
+    }
+    // Method handle NullPointer exception
+    public String validatePass(String pass) {
+        String validPassword = "Valid Password.";
+        String invalidPassword = "Invalid Password";
+        try {
+            Pattern pattern = Pattern.compile(PASSWORD_PATTERN);
+            if (!pattern.matcher(pass).matches()) {
+                return invalidPassword;
+            } else {
+                return validPassword;
+            }
+        } catch (NullPointerException exception){
+            return "Please entered valid password";
+        }
     }
 }
