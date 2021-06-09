@@ -2,3 +2,4 @@ com/userregistration/UserValidationException.java
  com.userregistration.UserValidationException
 com/userregistration/UserValidation.java
  com.userregistration.UserValidation
+ com.userregistration.ValidateUsersDetails

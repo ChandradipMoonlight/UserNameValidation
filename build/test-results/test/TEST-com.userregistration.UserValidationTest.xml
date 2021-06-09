@@ -1,8 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.userregistration.UserValidationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-08T13:34:12" hostname="MOONLIGHT" time="0.037">
+<testsuite name="com.userregistration.UserValidationTest" tests="29" skipped="0" failures="0" errors="0" timestamp="2021-06-09T17:32:45" hostname="MOONLIGHT" time="0.218">
   <properties/>
-  <testcase name="givenNullShouldReturnPleaseEnteredValidPassword()" classname="com.userregistration.UserValidationTest" time="0.037"/>
-  <system-out><![CDATA[com.userregistration.UserValidationException: Please enter the correct password
+  <testcase name="givenMobileNumberShouldThrowAnException()" classname="com.userregistration.UserValidationTest" time="0.03"/>
+  <testcase name="[1] abc@yahoo.com" classname="com.userregistration.UserValidationTest" time="0.027"/>
+  <testcase name="[2] abc-100@yahoo.com" classname="com.userregistration.UserValidationTest" time="0.002"/>
+  <testcase name="[3] abc.100@yahoo.com" classname="com.userregistration.UserValidationTest" time="0.003"/>
+  <testcase name="[4] abc111@abc.com" classname="com.userregistration.UserValidationTest" time="0.003"/>
+  <testcase name="[5] abc-100@abc.net" classname="com.userregistration.UserValidationTest" time="0.002"/>
+  <testcase name="[6] abc.100@abc.com.au" classname="com.userregistration.UserValidationTest" time="0.002"/>
+  <testcase name="[7] abc@1.com" classname="com.userregistration.UserValidationTest" time="0.001"/>
+  <testcase name="[8] abc@gmail.com" classname="com.userregistration.UserValidationTest" time="0.001"/>
+  <testcase name="[9] abc@gmail.com.com" classname="com.userregistration.UserValidationTest" time="0.003"/>
+  <testcase name="[10] abc+100@gmail.com" classname="com.userregistration.UserValidationTest" time="0.002"/>
+  <testcase name="[11] abc" classname="com.userregistration.UserValidationTest" time="0.002"/>
+  <testcase name="[12] abc@.com.my" classname="com.userregistration.UserValidationTest" time="0.001"/>
+  <testcase name="[13] abc123@gmail.a" classname="com.userregistration.UserValidationTest" time="0.004"/>
+  <testcase name="[14] abc123@.com" classname="com.userregistration.UserValidationTest" time="0.004"/>
+  <testcase name="[15] abc123@.com.com" classname="com.userregistration.UserValidationTest" time="0.004"/>
+  <testcase name="[16] .abc@abc.com" classname="com.userregistration.UserValidationTest" time="0.003"/>
+  <testcase name="[17] abc()*@gmail.com" classname="com.userregistration.UserValidationTest" time="0.003"/>
+  <testcase name="[18] abc@%*.com" classname="com.userregistration.UserValidationTest" time="0.002"/>
+  <testcase name="[19] abc..2002@gmail.com" classname="com.userregistration.UserValidationTest" time="0.002"/>
+  <testcase name="[20] abc.@gmail.com" classname="com.userregistration.UserValidationTest" time="0.002"/>
+  <testcase name="[21] abc@abc@gmail.com" classname="com.userregistration.UserValidationTest" time="0.002"/>
+  <testcase name="[22] abc@gmail.com.1a" classname="com.userregistration.UserValidationTest" time="0.002"/>
+  <testcase name="[23] abc@gmail.com.aa.au" classname="com.userregistration.UserValidationTest" time="0.004"/>
+  <testcase name="givenMobileNumberWhenProperShouldReturnValidMobileNumber()" classname="com.userregistration.UserValidationTest" time="0.007"/>
+  <testcase name="givenPasswordShouldReturnValidPassword()" classname="com.userregistration.UserValidationTest" time="0.002"/>
+  <testcase name="givenNullShouldReturnPleaseEnteredValidPassword()" classname="com.userregistration.UserValidationTest" time="0.002"/>
+  <testcase name="givenFirstName_LastNameWhenProperShouldReturnValidName()" classname="com.userregistration.UserValidationTest" time="0.002"/>
+  <testcase name="given fist name when proper should return Valid name and when incorrect should throw an exception" classname="com.userregistration.UserValidationTest" time="0.002"/>
+  <system-out><![CDATA[com.userregistration.UserValidationException: Please entered the valid mobile number
+com.userregistration.UserValidationException: Valid Email
+com.userregistration.UserValidationException: Valid Email
+com.userregistration.UserValidationException: Valid Email
+com.userregistration.UserValidationException: Valid Email
+com.userregistration.UserValidationException: Valid Email
+com.userregistration.UserValidationException: Valid Email
+com.userregistration.UserValidationException: Valid Email
+com.userregistration.UserValidationException: Valid Email
+com.userregistration.UserValidationException: Valid Email
+com.userregistration.UserValidationException: Valid Email
+com.userregistration.UserValidationException: Please enter the correct email address
+com.userregistration.UserValidationException: Please enter the correct email address
+com.userregistration.UserValidationException: Please enter the correct email address
+com.userregistration.UserValidationException: Please enter the correct email address
+com.userregistration.UserValidationException: Please enter the correct email address
+com.userregistration.UserValidationException: Please enter the correct email address
+com.userregistration.UserValidationException: Please enter the correct email address
+com.userregistration.UserValidationException: Please enter the correct email address
+com.userregistration.UserValidationException: Please enter the correct email address
+com.userregistration.UserValidationException: Please enter the correct email address
+com.userregistration.UserValidationException: Please enter the correct email address
+com.userregistration.UserValidationException: Please enter the correct email address
+com.userregistration.UserValidationException: Please enter the correct email address
+com.userregistration.UserValidationException: Please enter the correct password
+com.userregistration.UserValidationException: Please Entered Valid Name
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
